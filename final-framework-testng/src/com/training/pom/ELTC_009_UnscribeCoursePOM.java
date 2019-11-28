@@ -56,7 +56,7 @@ private WebDriver driver;
 		chkbox.click();
 		unscribe.click();
 		String Alert = driver.switchTo().alert().getText();
-		System.out.println("Allert messag is"+Alert);
+		System.out.println("Alert messag is: "+Alert);
 		driver.switchTo().alert().accept();
 		String comp = "User is now unsubscribed";
 		message=cnfmsg.getText();

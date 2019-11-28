@@ -12,11 +12,12 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.ELTC_009_UnscribeCoursePOM;
+import com.training.pom.ELTC_010_SearchCoursePOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class ELTC_009_UnscribeCourseTest 
+public class ELTC_010_SearchCourseTest 
 {
 	private static WebDriver driver;
 	private String baseUrl;
@@ -25,8 +26,8 @@ public class ELTC_009_UnscribeCourseTest
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_009_UnscribeCoursePOM unscribe;
-	
+	private ELTC_010_SearchCoursePOM searchcourse;
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
 	{
@@ -35,13 +36,13 @@ public class ELTC_009_UnscribeCourseTest
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 	}
-	@BeforeMethod
+@BeforeMethod
 	
 	public void setUp() throws Exception {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		unscribe = new ELTC_009_UnscribeCoursePOM(driver);
+		searchcourse = new ELTC_010_SearchCoursePOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");
@@ -49,17 +50,16 @@ public class ELTC_009_UnscribeCourseTest
 		// open the browser 
 		driver.get(baseUrl);
 	}
-	
-	@Test
-	public  void UnscribeCourseTest() {
-		elearning_LoginPOM.Elearning_LoginPOM(username, password);
-		unscribe.validateAdminHeader();
-		unscribe.ELTC_009_UnscribeCourse();
+@Test
+	public  void SearchCourse() {
+	elearning_LoginPOM.Elearning_LoginPOM(username, password);
+	searchcourse.validateAdminHeader();
+	searchcourse.SearchCourse();
 	}
-	@AfterMethod
-	public void tearDown() throws Exception {
-		Thread.sleep(1000);
-		screenShot.captureScreenShot("Unscribecourse");
-		driver.quit();
-	}
+@AfterMethod
+public void tearDown() throws Exception {
+	Thread.sleep(1000);
+	screenShot.captureScreenShot("searchcourse");
+	driver.quit();
+}
 }
