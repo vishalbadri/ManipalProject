@@ -14,7 +14,6 @@ import com.training.generics.ScreenShot;
 import com.training.pom.AdministrationPOM;
 import com.training.pom.CreatecoursePOM;
 import com.training.pom.Elearning_LoginPOM;
-import com.training.sanity.tests.*;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -67,6 +66,8 @@ public class CreatecourseTest {
 		createcourse.validateCreatecourseHeader();
 		createcourse.CreateacoursePOM(cotitle, cd, ct, lan);	
 		createcourse.validateAftercreate();
+		createcourse.Clickcourse();
+		
 	}
 	@AfterMethod
 	public void tearDown() throws Exception {

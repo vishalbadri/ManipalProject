@@ -6,9 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreatecoursePOM {
 	private WebDriver driver; 
@@ -23,21 +24,25 @@ public class CreatecoursePOM {
 	
 	@FindBy(id="visual_code")
 	private WebElement code;
-
-	@FindBy(id=contains(text(),'none')")
+	
 	private WebElement category;
-//	Select category = new Select(FindElement(driver.findElement(By.className("filter-option-inner-inner"))));
-
-//	@FindBy(how = How.CLASS_NAME, using = "filter-option")
-//	private WebElement category;
-//	private WebElement language = driver.findElement(By.xpath("//*[@id=\'update_course\']/fieldset/div[7]/div[1]/div/button/div/div/div"));
-	@FindBy(className = "filter-option-inner-inner")
 	private WebElement language;
+	@FindBy(xpath="//div[@class='toolbar-edit']//a[1]")
+	private WebElement icon;
+	
+	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
+	private WebElement putintro;
 	
 	@FindBy(id="update_course_submit")
 	private WebElement Create_course_Btn;
 	
-	// Validating the header of the Createcourse page by using assert 	
+	@FindBy(name="intro_cmdUpdate")
+	private WebElement saveintro;
+	
+	@FindBy(id="view_as_link")
+	private WebElement saved;
+	
+		// Validating the header of the Createcourse page by using assert 	
 	String act;
 	String pgTitle ="My Organization - My education - Create a course";
 		
@@ -51,37 +56,60 @@ public class CreatecoursePOM {
 			System.out.println("Create a course Page Verified");
 			
 		}
-		private WebElement FindElement(WebElement findElement) {
-			// TODO Auto-generated method stub
-			return null;
+		// creating public method to get values from dropdowns
+		public static void selectValueFromDropdown(WebElement element, String value) {
+			Select select = new Select(element);
+			select.selectByVisibleText(value);
 		}
-		// Fill up the required details
+		
+		// Fill up the required details for create Course
 		
 		public void CreateacoursePOM(String coutitle, String cod,String cat,String lang)
 		{
-			System.out.println("Start filling the items");
-			System.out.println("Filling Course title");
+			System.out.println("Start filling course details items");
+			
 			this.coursetitle.clear();
 			this.coursetitle.sendKeys(coutitle);
-			System.out.println("Filling Code");
+			
 			this.code.clear();
 			this.code.sendKeys(cod);
-			System.out.println("Filling category");
-			this.category.sendKeys(cat);
-			System.out.println("Fillinf Language");
-			this.language.sendKeys(lang);
-			System.out.println("Clicking the create Button");
+			
+			this.category = driver.findElement(By.id("update_course_category_code"));
+			selectValueFromDropdown(category,cat);			
+			
+			this.language = driver.findElement(By.id("update_course_course_language"));
+			selectValueFromDropdown(language,lang);
+			
 			this.Create_course_Btn.click();
+			System.out.println("Filled all items and Clicked Create Button");
 			
 		}
 		// Validating after Successful course creation
-		String crActual;
+		String crActual; 		
 		String crPage = "My Organization - My education - Course list";
 		public void validateAftercreate() {
-			System.out.println("Given Pageis:"+crPage);
+			
 			crActual = driver.getTitle();
-			System.out.println("Actual page title is"+crActual);
 			assertEquals(crPage,crActual);
+			driver.findElement(By.xpath("//div[@class='alert alert-success']"));
 			System.out.println("Create course sucessfully completed");
+			
 		}
+		
+		public void Clickcourse() {
+			
+			driver.findElement(By.linkText("Selenium")).click();
+			System.out.println("Clicking the icon");
+			icon.click();
+			System.out.println("Clicked  the icon");
+
+	//		putintro = putintro.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']"));
+			System.out.println("Adding Intro");
+			System.out.println("added Intro");
+			this.saveintro.click();
+			String s = saved.getText();
+			System.out.println(s);
+			
+		}
+		
 }
