@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ELTC_008_EntercoursedecsPOM {
 
@@ -33,11 +31,11 @@ private WebDriver driver;
 	@FindBy(id="course_description_title")
 	private WebElement desctitle;
 	
-	@FindBy(tagName = "iframe")
-	private WebElement cntframe;
+	@FindBy(tagName="iframe")
+	private WebElement frame;
 	
-	@FindBy(xpath="//iframe[@class='cke_wysiwyg_frame cke_reset']")
-	private WebElement content;
+//	@FindBy(xpath="//iframe[@class='cke_voice_label' and frameholder='0']")
+//	private WebElement content;
 	
 	@FindBy(id="course_description_submit")
 	private WebElement save;
@@ -60,16 +58,15 @@ private WebDriver driver;
 		
 	}
 	
-	public  void ELTC_008_Entercoursedecs()
+	public  void ELTC_008_Entercoursedecs()  
 	{
 	courselist.click();
 	selcourse.click();
 	coursedesc.click();
 	descript.click();
 	desctitle.sendKeys("selenium course for beginners");
-	WebDriverWait wait =new WebDriverWait(driver,1000);
-	wait.until(ExpectedConditions.visibilityOf(cntframe));
-	content.sendKeys("selenium course for beginners");
+	driver.switchTo().frame(0);
+	frame.sendKeys("selenium course for beginners");
 	save.click();
 //	System.out.println(msgdisp.getText());
 	

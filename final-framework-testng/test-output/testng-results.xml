@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37142" started-at="2019-11-28T10:33:34 IST" finished-at="2019-11-28T10:34:11 IST">
+  <suite name="Default suite" duration-ms="33529" started-at="2019-11-28T13:50:55 IST" finished-at="2019-11-28T13:51:29 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="37142" started-at="2019-11-28T10:33:34 IST" finished-at="2019-11-28T10:34:11 IST">
-      <class name="com.training.sanity.tests.ELTC_008_EntercoursedecsTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_008_EntercoursedecsTest@79be0360]" name="setUpBeforeClass" is-config="true" duration-ms="24" started-at="2019-11-28T10:33:34 IST" finished-at="2019-11-28T10:33:34 IST">
+    <test name="Default test" duration-ms="33529" started-at="2019-11-28T13:50:55 IST" finished-at="2019-11-28T13:51:29 IST">
+      <class name="com.training.sanity.tests.ELTC_009_UnscribeCourseTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_009_UnscribeCourseTest@79be0360]" name="setUpBeforeClass" is-config="true" duration-ms="13" started-at="2019-11-28T13:50:55 IST" finished-at="2019-11-28T13:50:55 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ELTC_008_EntercoursedecsTest@79be0360]" name="setUp" is-config="true" duration-ms="16191" started-at="2019-11-28T10:33:34 IST" finished-at="2019-11-28T10:33:50 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ELTC_009_UnscribeCourseTest@79be0360]" name="setUp" is-config="true" duration-ms="16963" started-at="2019-11-28T13:50:55 IST" finished-at="2019-11-28T13:51:12 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="EntercoursedecsTest()[pri:0, instance:com.training.sanity.tests.ELTC_008_EntercoursedecsTest@79be0360]" name="EntercoursedecsTest" duration-ms="18205" started-at="2019-11-28T10:33:50 IST" finished-at="2019-11-28T10:34:08 IST">
+        <test-method status="PASS" signature="UnscribeCourseTest()[pri:0, instance:com.training.sanity.tests.ELTC_009_UnscribeCourseTest@79be0360]" name="UnscribeCourseTest" duration-ms="14100" started-at="2019-11-28T13:51:12 IST" finished-at="2019-11-28T13:51:26 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EntercoursedecsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_008_EntercoursedecsTest@79be0360]" name="tearDown" is-config="true" duration-ms="2676" started-at="2019-11-28T10:34:08 IST" finished-at="2019-11-28T10:34:11 IST">
+        </test-method> <!-- UnscribeCourseTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_009_UnscribeCourseTest@79be0360]" name="tearDown" is-config="true" duration-ms="2408" started-at="2019-11-28T13:51:26 IST" finished-at="2019-11-28T13:51:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.ELTC_008_EntercoursedecsTest -->
+      </class> <!-- com.training.sanity.tests.ELTC_009_UnscribeCourseTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
