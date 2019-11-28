@@ -23,12 +23,13 @@ public class AdministrationPOM
 	@FindBy(xpath="//panel1[contains(text(), 'Courses')]")
 	private WebElement panelheading;
 			
+	
+// Validating the header of the Administation page by using assert 	
 	String actual;
 	String pageTitle ="My Organization - My education";
-// Validating the header of the Administation page by using assert 		
 	public void validateHeader() 
 	{
-		 
+		
 		System.out.println("Given Title is:"+pageTitle);
 		actual = driver.getTitle();
 		System.out.println("Actual title is:"+actual);
