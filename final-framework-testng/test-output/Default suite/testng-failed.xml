@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.CreatecourseTest">
+      <class name="com.training.sanity.tests.ELTC_008_EntercoursedecsTest">
         <methods>
-          <include name="setUpBeforeClass"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="createcourseTest"/>
+          <include name="tearDown"/>
+          <include name="EntercoursedecsTest"/>
+          <include name="setUpBeforeClass"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.CreatecourseTest -->
+      </class> <!-- com.training.sanity.tests.ELTC_008_EntercoursedecsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

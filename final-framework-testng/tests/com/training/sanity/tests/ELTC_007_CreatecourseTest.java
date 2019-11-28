@@ -17,7 +17,7 @@ import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class CreatecourseTest {
+public class ELTC_007_CreatecourseTest {
 	private static WebDriver driver;
 	private String baseUrl;
 	private String username;
