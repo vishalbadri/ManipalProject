@@ -46,8 +46,7 @@ private WebDriver driver;
 	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
 	private WebElement comment;
 	
-	@FindBy(xpath="//*[@id='work_comment_button']")
-	//*[@id="work_comment_button"]
+	
 	private WebElement sendbtn;
 	
 	@FindBy(xpath="//div[contains(text(),'You comment has been added')]")
@@ -85,9 +84,11 @@ private WebDriver driver;
 		System.out.println("Correct Assignment Page");
 		correctnrate.click();
 		List <WebElement> fr =    driver.findElements(By.tagName("iframe"));
-		System.out.println(fr.size());
+		System.out.println("Frames are:"+fr.size());
 		driver.switchTo().frame(0);
 		comment.sendKeys("40");
+		driver.switchTo().defaultContent();
+		sendbtn = driver.findElement(By.name("button"));
 		sendbtn.click();
 		assertEquals(alert1.getText(),"You comment has been added");  
 		assertEquals(alert2.getText(),"Update successful");
