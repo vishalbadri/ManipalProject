@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * 	@since 16-Dec-2018 
  */
 public class DriverFactory {
+	// it only a reference 
 	private static WebDriver driver; 
 	
 	public static WebDriver getDriver(String driverName){
@@ -32,6 +33,7 @@ public class DriverFactory {
 		}else if(driverName.equals(DriverNames.PHANTOM)){
 			// TODO 
 		}
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;

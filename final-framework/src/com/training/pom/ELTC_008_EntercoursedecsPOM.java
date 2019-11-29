@@ -36,14 +36,12 @@ private WebDriver driver;
 	@FindBy(id="course_description_title")
 	private WebElement desctitle;
 	
-
-	
 	
 	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']")
 	private WebElement content;
 	
-	@FindBy(name="intro_cmdUpdate")
-	private WebElement save;
+	@FindBy(id="course_description_submit")
+	private WebElement s;
 	
 	@FindBy(xpath="//*[@id='cm-content']/div/div[3]/div/div[2]")
 	private WebElement msgdisp;
@@ -71,11 +69,12 @@ private WebDriver driver;
 	descript.click();
 	desctitle.sendKeys("selenium course for beginners");
 	List <WebElement> i =    driver.findElements(By.tagName("iframe"));
-    driver.switchTo().frame(0);
-	content.clear();
+	System.out.println(i.size());
+	driver.switchTo().frame(0);
 	content.sendKeys("selenium course for beginners");
 	driver.switchTo().defaultContent();
-	save.click();
+	System.out.println("updates done, clicking on save");
+	s.click();
 	System.out.println(msgdisp.getText());
 	System.out.println("Update sucessful");
 	
