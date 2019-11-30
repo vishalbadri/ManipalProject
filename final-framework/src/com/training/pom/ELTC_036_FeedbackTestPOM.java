@@ -27,7 +27,7 @@ private WebDriver driver;
 	@FindBy(xpath="//tr[@id='126']//span[@class='label label-info'][contains(text(),'Not validated')]")
 	private WebElement Beforesatus;
 	
-	@FindBy(xpath="//tr[@id='125']//a[1]//img[1]")
+	@FindBy(xpath="//div[@id='gbox_results']//a[1]//img[1]")
 	private WebElement grade;
 	
 //	@FindBy(xpath="//*[@id='qf_9b594d']")
