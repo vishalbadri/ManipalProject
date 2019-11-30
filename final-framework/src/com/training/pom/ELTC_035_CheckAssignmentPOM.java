@@ -74,9 +74,12 @@ private WebDriver driver;
 		assertEquals(pgTitle, act);
 		System.out.println("Page verified");
 	}
-	public  void checkAssignment() {
+	public void Selcourse() {
 		courselist.click();
 		selcourse.click();
+	}
+	public  void checkAssignment() {
+		
 		Assignments.click();
 		chkbox.click();
 		clkAssign.click();
