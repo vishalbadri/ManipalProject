@@ -17,8 +17,12 @@ private WebDriver driver;
 	PageFactory.initElements(driver, this);
 }
 	//Finding  the WebElements here
+	
+
 	@FindBy(xpath="//a[@id='istooldesc_6428']")
 	private WebElement Groups;
+	
+	
 	@FindBy(xpath="//div[@id='toolbar-groups']//a[1]//img[1]")
 	private WebElement creategrpikn;
 	
