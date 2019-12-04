@@ -91,9 +91,12 @@ public class ELTC_066_TeacherStuQuizTest {
 		addonlinequiz.AddOnlinequizexcer(Title);
 		addonlinequiz.AddOnlineitem(Quest, Firsto, Secondo, Thirdo, Fourtho);
 		addonlinequiz.AddOnlineitem(Quest2, Firsto2, Secondo2, Thirdo2, Fourtho2);
+		addonlinequiz.previewclose();
+		teachstuquiz.StuTeachlogout();
 		elearning_LoginPOM.Elearning_LoginPOM(Sturname, Stupass);
 		teachstuquiz.validateStuHeader();
 		teachstuquiz.StudentQuiz();
+		teachstuquiz.StuTeachlogout();
 		elearning_LoginPOM.Elearning_LoginPOM(username, password);
 		feedbacktest.FeedbackTest();
 	}

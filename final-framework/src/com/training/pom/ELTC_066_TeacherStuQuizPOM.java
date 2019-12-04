@@ -32,7 +32,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement starttest;
 	
 	//Student Answer first question
-	@FindBy(xpath="//input[@id='choice-156-1']")
+	@FindBy(id="choice-161-1")
 	private WebElement firstans;
 	
 	//Student clicks next question
@@ -40,7 +40,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement Nextbtn;
 	
 	//Studenr answers Next Que
-	@FindBy(xpath="//input[@id='choice-157-1']")
+	@FindBy(id="choice-162-1")
 	private WebElement secans;
 	
 	//Student clicks EndTest
@@ -50,6 +50,14 @@ public class ELTC_066_TeacherStuQuizPOM {
 	//Results get saved - title  "Saved"
 	@FindBy(xpath="//div[contains(text(),'Saved.')]")
 	private WebElement Sucessmsg;
+	
+	//Logout menu
+	@FindBy(xpath="//*[@id=\"navbar\"]/ul[2]/li[2]/a/img")
+	private WebElement dropdown;
+	
+	//Click Logout
+	@FindBy(id="logout_button")
+	private WebElement logout;
 	
 	public  void validateStuHeader() 
 	{
@@ -72,5 +80,9 @@ public class ELTC_066_TeacherStuQuizPOM {
 		assertEquals(Sucessmsg.getText(),"Saved.");
 		System.out.println("Student Test completed");
 	}
-	
+	public void StuTeachlogout() {
+		dropdown.click();
+		logout.click();
+		
+	}
 }

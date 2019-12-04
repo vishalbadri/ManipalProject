@@ -20,7 +20,7 @@ private WebDriver driver;
 	//Finding  the WebElements here
 	
 	//Click on Test
-	@FindBy(id="istooldesc_6423")
+	@FindBy(linkText="Tests")
 	private WebElement Tests;
 	
 	//Click on Create a new test button
@@ -52,7 +52,7 @@ private WebDriver driver;
 	private WebElement starttime;
 	
 	//Select valid credentials in time sections
-	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[4]/a")
 	private WebElement datepick;
 	
 	//Select valid credentials in time sections and click on done
@@ -84,19 +84,12 @@ private WebDriver driver;
 	private WebElement question;
 	
 	//enter valid credentials in first option textbox - Frame1
-
 	private WebElement firstoption;
-	
 	//enter valid credentials in second option textbox - frame3
-
 	private WebElement secondoption;
-	
 	//enter valid credentials in third option textbox - frame5
-
 	private WebElement thirdoption;
-	
 	//enter valid credentials in forth option textbox - frame7
-
 	private WebElement fourthoption;
 	
 	
@@ -149,10 +142,7 @@ private WebDriver driver;
 	}
 	public void AddOnlineitem(String quest, String firsto, String secondo, String thirdo, String fourtho)
 	{
-	multichoice.click();
-/*		for (int i =0;i<5;i++) {
-			
-		}*/
+		multichoice.click();
 		question.clear();
 		question.sendKeys(quest);
 		List <WebElement> ifr1 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
@@ -181,11 +171,14 @@ private WebDriver driver;
 		fourthoption.sendKeys(fourtho);
 		driver.switchTo().defaultContent();
 		addbutton.click();
-		assertEquals(sucessalert.getText(),"Item added");
+		assertEquals(sucessalert.getText(),"Item added");		
+	}
+	
+	public void previewclose() {
 		preview.click();
 		assertEquals(starttest.getText(),"Start test");
 		System.out.println("Verified all");
-		
+
 	}
 
 }
