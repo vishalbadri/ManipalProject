@@ -23,7 +23,7 @@ private WebDriver driver;
 	@FindBy(linkText = "Course list")
 	private WebElement courselist;
 	
-	@FindBy(linkText = "Selenium")
+	@FindBy(linkText = "Seleniumbasic")
 	private WebElement selcourse;
 	
 	@FindBy(id="istooldesc_6430")

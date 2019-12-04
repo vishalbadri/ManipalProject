@@ -52,7 +52,6 @@ private WebDriver driver;
 	private WebElement starttime;
 	
 	//Select valid credentials in time sections
-//	@FindBy(xpath="//td[contains(@class,'ui-datepicker-week-end')]//a[@class='ui-state-default'][contains(text(),'7')]")
 	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]/a")
 	private WebElement datepick;
 	
@@ -85,19 +84,19 @@ private WebDriver driver;
 	private WebElement question;
 	
 	//enter valid credentials in first option textbox - Frame1
-//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+
 	private WebElement firstoption;
 	
 	//enter valid credentials in second option textbox - frame3
-//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+
 	private WebElement secondoption;
 	
 	//enter valid credentials in third option textbox - frame5
-//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+
 	private WebElement thirdoption;
 	
 	//enter valid credentials in forth option textbox - frame7
-//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+
 	private WebElement fourthoption;
 	
 	
@@ -126,7 +125,7 @@ private WebDriver driver;
 		System.out.println("Page verified");
 	}
 	
-	public void AddOnlinequiz(String ttitle, String quest, String firsto, String secondo, String thirdo, String fourtho) 
+	public void AddOnlinequizexcer(String ttitle) 
 	{
 		Tests.click();
 		creatnewtest.click();
@@ -134,7 +133,6 @@ private WebDriver driver;
 		testtile.sendKeys(ttitle);
 		advancedsetting.click();
 		List <WebElement> fr =    driver.findElements(By.tagName("iframe")); 
-		System.out.println("Frames are:"+fr.size());
 		driver.switchTo().frame(0);
 		contextoftest.clear();
 		contextoftest.sendKeys("quiz");
@@ -148,34 +146,35 @@ private WebDriver driver;
 		passpercent.sendKeys("50");
 		proceed.click();
 		assertEquals(Exceraddalert.getText(),"Exercise added");
-		multichoice.click();
+	}
+	public void AddOnlineitem(String quest, String firsto, String secondo, String thirdo, String fourtho)
+	{
+	multichoice.click();
 /*		for (int i =0;i<5;i++) {
 			
 		}*/
 		question.clear();
 		question.sendKeys(quest);
-		
 		List <WebElement> ifr1 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
-		//System.out.println("Frames are:"+ifr.size());
-		//
+//switch to first frame		
 		driver.switchTo().frame(1);
 		firstoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
 		firstoption.clear();
 		firstoption.sendKeys(firsto);
 		driver.switchTo().defaultContent();
-		List <WebElement> ifr2 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+// switch to second frame
 		driver.switchTo().frame(3);
 		secondoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
 		secondoption.clear();
 		secondoption.sendKeys(secondo);
 		driver.switchTo().defaultContent();
-		List <WebElement> ifr3 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+// switch to third frame
 		driver.switchTo().frame(5);
 		thirdoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
 		thirdoption.clear();
 		thirdoption.sendKeys(thirdo);
 		driver.switchTo().defaultContent();
-		List <WebElement> ifr4 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+// switch to fourth frame
 		driver.switchTo().frame(7);
 		fourthoption=driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
 		fourthoption.clear();
