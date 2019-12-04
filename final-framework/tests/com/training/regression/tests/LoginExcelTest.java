@@ -59,9 +59,9 @@ public class LoginExcelTest {
 		
 		// the values here can be hard coded 
 		// or pull from database or excel sheet 
-		filePath = "C:/Users/Naveen/Desktop/Testing.xlsx"; 
+		filePath = "C:\\Users\\BADRIVISHALBODYGUARD\\git\\ManipalProject1\\final-framework-testng\\Elearning_TestData.xlsx"; 
 		
-		List<List<Object>> list = excelRead.getExcelContent(filePath);
+		List<List<Object>> list = ApachePOIExcelRead.getExcelContent(filePath);
 		
 		for(List<Object> temp : list){
 			LoginBean loginBean = new LoginBean(); 

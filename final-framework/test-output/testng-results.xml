@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52892" started-at="2019-12-01T20:30:14 IST" finished-at="2019-12-01T20:31:07 IST">
+  <suite name="Default suite" duration-ms="326372" started-at="2019-12-04T20:01:08 IST" finished-at="2019-12-04T20:06:34 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52892" started-at="2019-12-01T20:30:14 IST" finished-at="2019-12-01T20:31:07 IST">
-      <class name="com.training.sanity.tests.ELTC_038_CreateGroupsTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_038_CreateGroupsTest@6c49835d]" name="setUpBeforeClass" is-config="true" duration-ms="40" started-at="2019-12-01T20:30:14 IST" finished-at="2019-12-01T20:30:14 IST">
+    <test name="Default test" duration-ms="326372" started-at="2019-12-04T20:01:08 IST" finished-at="2019-12-04T20:06:34 IST">
+      <class name="com.training.complex.test.ELTC_065_AddOnlinequizTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.complex.test.ELTC_065_AddOnlinequizTest@694e1548]" name="setUpBeforeClass" is-config="true" duration-ms="24" started-at="2019-12-04T20:01:08 IST" finished-at="2019-12-04T20:01:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ELTC_038_CreateGroupsTest@6c49835d]" name="setUp" is-config="true" duration-ms="19232" started-at="2019-12-01T20:30:14 IST" finished-at="2019-12-01T20:30:33 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.complex.test.ELTC_065_AddOnlinequizTest@694e1548]" name="setUp" is-config="true" duration-ms="264000" started-at="2019-12-04T20:01:08 IST" finished-at="2019-12-04T20:05:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="CreateGroupsTestTest()[pri:0, instance:com.training.sanity.tests.ELTC_038_CreateGroupsTest@6c49835d]" name="CreateGroupsTestTest" duration-ms="28302" started-at="2019-12-01T20:30:33 IST" finished-at="2019-12-01T20:31:01 IST">
+        <test-method status="PASS" signature="AddOnlinequizTest()[pri:0, instance:com.training.complex.test.ELTC_065_AddOnlinequizTest@694e1548]" name="AddOnlinequizTest" duration-ms="58417" started-at="2019-12-04T20:05:32 IST" finished-at="2019-12-04T20:06:31 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateGroupsTestTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_038_CreateGroupsTest@6c49835d]" name="tearDown" is-config="true" duration-ms="5256" started-at="2019-12-01T20:31:01 IST" finished-at="2019-12-01T20:31:07 IST">
+        </test-method> <!-- AddOnlinequizTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.complex.test.ELTC_065_AddOnlinequizTest@694e1548]" name="tearDown" is-config="true" duration-ms="3866" started-at="2019-12-04T20:06:31 IST" finished-at="2019-12-04T20:06:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.ELTC_038_CreateGroupsTest -->
+      </class> <!-- com.training.complex.test.ELTC_065_AddOnlinequizTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

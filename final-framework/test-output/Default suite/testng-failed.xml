@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ELTC_038_CreateGroupsTest">
+      <class name="com.training.complex.test.ELTC_065_AddOnlinequizTest">
         <methods>
-          <include name="CreateGroupsTestTest"/>
           <include name="setUpBeforeClass"/>
+          <include name="AddOnlinequizTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.ELTC_038_CreateGroupsTest -->
+      </class> <!-- com.training.complex.test.ELTC_065_AddOnlinequizTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

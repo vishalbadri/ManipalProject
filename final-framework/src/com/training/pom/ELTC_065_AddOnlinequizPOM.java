@@ -44,18 +44,19 @@ private WebDriver driver;
 	private WebElement Feedback;
 	
 	//click on Enable start time checkbox
-	@FindBy(xpath="//input[@id='qf_f54e82']")
+	@FindBy(xpath="//label[contains(text(),'Enable start time')]")
 	private WebElement enablestart;
 	
 	//click on Enable start time after check box
-	@FindBy(id="start_time_alt_text")
+	@FindBy(xpath="//div[@id='date_time_wrapper_start_time']//span[@class='input-group-addon cursor-pointer']")
 	private WebElement starttime;
 	
 	//Select valid credentials in time sections
-	@FindBy(xpath="//td[contains(@class,'ui-datepicker-week-end')]//a[@class='ui-state-default'][contains(text(),'7')]")
+//	@FindBy(xpath="//td[contains(@class,'ui-datepicker-week-end')]//a[@class='ui-state-default'][contains(text(),'7')]")
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[7]/a")
 	private WebElement datepick;
 	
-	//Select valid credentials in time sections and clicl on done
+	//Select valid credentials in time sections and click on done
 	@FindBy(xpath="//*[@id=\"ui-datepicker-div\"]/div[3]/button[2]")
 	private WebElement done;
 	
@@ -76,23 +77,27 @@ private WebDriver driver;
 	private WebElement multichoice;
 	
 	//Enter valid credentials in Questions textbox
-	@FindBy(xpath="//input[@id='question_admin_form_questionName']")
+	
+	@FindBy(xpath="//form[@id='question_admin_form']")
+	private WebElement form;
+	
+	@FindBy(id="question_admin_form_questionName")
 	private WebElement question;
 	
 	//enter valid credentials in first option textbox - Frame1
-	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
 	private WebElement firstoption;
 	
 	//enter valid credentials in second option textbox - frame3
-	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
 	private WebElement secondoption;
 	
 	//enter valid credentials in third option textbox - frame5
-	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
 	private WebElement thirdoption;
 	
 	//enter valid credentials in forth option textbox - frame7
-	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
+//	@FindBy(xpath="//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p")
 	private WebElement fourthoption;
 	
 	
@@ -121,15 +126,17 @@ private WebDriver driver;
 		System.out.println("Page verified");
 	}
 	
-	public void AddOnlinequiz(String ttitle) 
+	public void AddOnlinequiz(String ttitle, String quest, String firsto, String secondo, String thirdo, String fourtho) 
 	{
 		Tests.click();
 		creatnewtest.click();
+		testtile.clear();
 		testtile.sendKeys(ttitle);
 		advancedsetting.click();
-		List <WebElement> fr =    driver.findElements(By.tagName("iframe"));
+		List <WebElement> fr =    driver.findElements(By.tagName("iframe")); 
 		System.out.println("Frames are:"+fr.size());
 		driver.switchTo().frame(0);
+		contextoftest.clear();
 		contextoftest.sendKeys("quiz");
 		driver.switchTo().defaultContent();
 		Feedback.click();
@@ -137,13 +144,48 @@ private WebDriver driver;
 		starttime.click();
 		datepick.click();
 		done.click();
+		passpercent.clear();
 		passpercent.sendKeys("50");
 		proceed.click();
-		assertEquals(Exceraddalert.getText(),"");
+		assertEquals(Exceraddalert.getText(),"Exercise added");
+		multichoice.click();
+/*		for (int i =0;i<5;i++) {
+			
+		}*/
+		question.clear();
+		question.sendKeys(quest);
 		
-		
-		
-		
+		List <WebElement> ifr1 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+		//System.out.println("Frames are:"+ifr.size());
+		//
+		driver.switchTo().frame(1);
+		firstoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
+		firstoption.clear();
+		firstoption.sendKeys(firsto);
+		driver.switchTo().defaultContent();
+		List <WebElement> ifr2 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+		driver.switchTo().frame(3);
+		secondoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
+		secondoption.clear();
+		secondoption.sendKeys(secondo);
+		driver.switchTo().defaultContent();
+		List <WebElement> ifr3 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+		driver.switchTo().frame(5);
+		thirdoption = driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
+		thirdoption.clear();
+		thirdoption.sendKeys(thirdo);
+		driver.switchTo().defaultContent();
+		List <WebElement> ifr4 =    driver.findElements(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+		driver.switchTo().frame(7);
+		fourthoption=driver.findElement(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']//p"));
+		fourthoption.clear();
+		fourthoption.sendKeys(fourtho);
+		driver.switchTo().defaultContent();
+		addbutton.click();
+		assertEquals(sucessalert.getText(),"Item added");
+		preview.click();
+		assertEquals(starttest.getText(),"Start test");
+		System.out.println("Verified all");
 		
 	}
 
