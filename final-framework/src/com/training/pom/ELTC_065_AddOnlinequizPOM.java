@@ -1,5 +1,10 @@
 package com.training.pom;
 
+import static org.testng.AssertJUnit.assertEquals;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -107,5 +112,39 @@ private WebDriver driver;
 	@FindBy(xpath="//a[@class='btn btn-success btn-large']")
 	private WebElement starttest;
 
+	public  void validateHeader() 
+	{
+		
+		String pgTitle ="My Organization - My education";
+		String act = driver.getTitle();	
+		assertEquals(pgTitle,act);
+		System.out.println("Page verified");
+	}
+	
+	public void AddOnlinequiz(String ttitle) 
+	{
+		Tests.click();
+		creatnewtest.click();
+		testtile.sendKeys(ttitle);
+		advancedsetting.click();
+		List <WebElement> fr =    driver.findElements(By.tagName("iframe"));
+		System.out.println("Frames are:"+fr.size());
+		driver.switchTo().frame(0);
+		contextoftest.sendKeys("quiz");
+		driver.switchTo().defaultContent();
+		Feedback.click();
+		enablestart.click();
+		starttime.click();
+		datepick.click();
+		done.click();
+		passpercent.sendKeys("50");
+		proceed.click();
+		assertEquals(Exceraddalert.getText(),"");
+		
+		
+		
+		
+		
+	}
 
 }

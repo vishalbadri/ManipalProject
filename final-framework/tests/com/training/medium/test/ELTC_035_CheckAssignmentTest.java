@@ -1,4 +1,4 @@
-package com.training.sanity.tests;
+package com.training.medium.test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,12 +11,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_009_UnscribeCoursePOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class ELTC_009_UnscribeCourseTest 
+import com.training.pom.ELTC_035_CheckAssignmentPOM;
+
+public class ELTC_035_CheckAssignmentTest 
 {
 	private static WebDriver driver;
 	private String baseUrl;
@@ -25,7 +26,7 @@ public class ELTC_009_UnscribeCourseTest
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_009_UnscribeCoursePOM unscribe;
+	private ELTC_035_CheckAssignmentPOM checkassignemnt;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -35,13 +36,14 @@ public class ELTC_009_UnscribeCourseTest
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 	}
-	@BeforeMethod
+	
+@BeforeMethod
 	
 	public void setUp() throws Exception {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		unscribe = new ELTC_009_UnscribeCoursePOM(driver);
+		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");
@@ -49,17 +51,17 @@ public class ELTC_009_UnscribeCourseTest
 		// open the browser 
 		driver.get(baseUrl);
 	}
-	
 	@Test
-	public  void UnscribeCourseTest() {
+	public  void CheckAssignmentTest() {
 		elearning_LoginPOM.Elearning_LoginPOM(username, password);
-		unscribe.validateAdminHeader();
-		unscribe.ELTC_009_UnscribeCourse();
+		checkassignemnt.validatechkasnHeader();
+		checkassignemnt.Selcourse();
+		checkassignemnt.checkAssignment();
 	}
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		screenShot.captureScreenShot("Unscribecourse");
+		screenShot.captureScreenShot("ChkAssignment");
 		driver.quit();
 	}
 }

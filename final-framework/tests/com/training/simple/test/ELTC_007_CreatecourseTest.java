@@ -1,4 +1,4 @@
-package com.training.sanity.tests;
+package com.training.simple.test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
