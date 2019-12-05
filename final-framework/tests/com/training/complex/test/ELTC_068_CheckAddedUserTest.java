@@ -29,6 +29,7 @@ public class ELTC_068_CheckAddedUserTest
 	private String Adusrphone;
 	private String Adusrlognme;
 	private String Adusrlogpwd;
+	private String Adusrprofile;
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
@@ -59,6 +60,7 @@ public class ELTC_068_CheckAddedUserTest
 		Adusrphone= properties.getProperty("Adusrph");
 		Adusrlognme= properties.getProperty("Adusrlgn");
 		Adusrlogpwd= properties.getProperty("Adusrpwd");
+		Adusrprofile=properties.getProperty("Aduprof");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
@@ -68,7 +70,7 @@ public class ELTC_068_CheckAddedUserTest
 	{
 		elearning_LoginPOM.Elearning_LoginPOM(username, password);
 		addonlinequiz.validateHeader();
-		checkadduser.CheckAddedUser(Adusrfirstnme, Adusrlastnme, Adusremail, Adusrphone, Adusrlognme, Adusrlogpwd);
+		checkadduser.CheckAddedUser(Adusrfirstnme, Adusrlastnme, Adusremail, Adusrphone, Adusrlognme, Adusrlogpwd, Adusrprofile);
 		checkadduser.searchuser(Adusrfirstnme);
 	}
 	@AfterMethod

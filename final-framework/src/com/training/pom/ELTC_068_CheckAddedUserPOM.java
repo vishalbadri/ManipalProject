@@ -45,7 +45,7 @@ private WebDriver driver;
 	private WebElement uname;
 	
 	//Click on Enter password radio button
-	@FindBy(xpath="//input[@id='qf_9cbc4f']")
+	@FindBy(xpath="//label[contains(text(),'Enter password')]")
 	private WebElement entpassword;
 	
 	//Enter Password
@@ -53,7 +53,7 @@ private WebDriver driver;
 	private WebElement upassword;
 	
 	//Select Valid credentials from profile drop down
-	@FindBy(id="status_select")
+	@FindBy(xpath="//*[@id='user_add']/fieldset/div[10]/div[1]/div/button")
 	private WebElement dropdwn;
 	
 	//Select Trainer
@@ -80,7 +80,7 @@ private WebDriver driver;
 	@FindBy(xpath="//a[contains(text(),'manszoor')]")
 	private WebElement verify;
 
-	public void CheckAddedUser(String adufname, String adulname, String adumail, String adufone, String adunme, String adupwd) 
+	public void CheckAddedUser(String adufname, String adulname, String adumail, String adufone, String adunme, String adupwd, String adupro) 
 	{
 		administration.click();
 		adduser.click();
@@ -97,10 +97,9 @@ private WebDriver driver;
 		entpassword.click();
 		upassword.clear();
 		upassword.sendKeys(adupwd);
-		dropdwn.click();
-		trainer.click();
+		dropdwn.sendKeys(adupro);
 		addbtn.click();
-		assertEquals(addalert.getText(),"The user has been added:"+adufname+" "+adulname);
+		assertEquals(addalert.getText(),"The user has been added: "+adufname+" "+adulname);
 		System.out.println("User Added");
 	}
 	public void searchuser(String adufname) 
