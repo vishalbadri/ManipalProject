@@ -32,7 +32,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement starttest;
 	
 	//Student Answer first question
-	@FindBy(id="choice-161-1")
+	@FindBy(xpath="//*[@id='choice-163-1']")
 	private WebElement firstans;
 	
 	//Student clicks next question
@@ -40,7 +40,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement Nextbtn;
 	
 	//Studenr answers Next Que
-	@FindBy(id="choice-162-1")
+	@FindBy(xpath="//*[@id='choice-164-1']")
 	private WebElement secans;
 	
 	//Student clicks EndTest
