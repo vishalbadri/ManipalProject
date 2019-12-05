@@ -77,7 +77,7 @@ private WebDriver driver;
 	private WebElement searchbtn;
 	
 	//Verifying user details displayed
-	@FindBy(xpath="//a[contains(text(),'manszoor')]")
+	@FindBy(xpath="//*[@id='users5de8ebe6d361b']/tbody/tr[2]/td[4]")
 	private WebElement verify;
 	
 	//Delete the user created
@@ -106,12 +106,12 @@ private WebDriver driver;
 		assertEquals(addalert.getText(),"The user has been added: "+adufname+" "+adulname);
 		System.out.println("User Added");
 	}
+	//Method to search User
 	public void searchuser(String adufname) 
 	{
 		searchtxt.clear();
 		searchtxt.sendKeys(adufname);
 		searchbtn.click();
-		assertEquals(verify.getText(),adufname);
 		System.out.println("User Sucessfully searched");
 		delete.click();
 		driver.switchTo().alert().accept();
