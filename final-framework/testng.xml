@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Sample test Suite">
-   <test name = "Sample test">
+<suite name = "Elearning test Suite">
+   <test name = "Simple test">
       <classes>
-         <class name = "com.training.sanity.tests.LoginTests" />
+         <class name = "com.training.simple.test.ELTC_007_CreatecourseTest" />
+         <class name = "com.training.simple.test.ELTC_008_EntercoursedecsTest" />
+         <class name = "com.training.simple.test.ELTC_009_UnscribeCourseTest" />
+         <class name = "com.training.simple.test.ELTC_010_SearchCourseTest" />
+      </classes>
+   </test>
+   <test name = "Medium test">
+      <classes>
+         <class name = "com.training.medium.test.ELTC_035_CheckAssignmentTest" />
+         <class name = "com.training.medium.test.ELTC_036_FeedbacRateTest" />
+         <class name = "com.training.medium.test.ELTC_037_SendReportsTest" />
+         <class name = "com.training.medium.test.ELTC_038_CreateGroupsTest" />
+      </classes>
+   </test>
+   <test name = "Complex test">
+      <classes>
+         <class name = "com.training.complex.test.ELTC_065_AddOnlinequizTest" />
+         <class name = "com.training.complex.test.ELTC_066_TeacherStuQuizTest" />
+         <class name = "com.training.complex.test.ELTC_067_AddmultitrainerTest" />
+         <class name = "com.training.complex.test.ELTC_068_CheckAddedUserTest" />
       </classes>
    </test>
 </suite>	

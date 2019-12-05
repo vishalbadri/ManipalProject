@@ -53,7 +53,6 @@ private WebDriver driver;
 		results.click();
 		System.out.println("Test not Graded");
 		grade.click();
-		//sendemail.click();
 		sendmail = driver.findElement(By.name("send_notification"));
 		sendmail.click();
 		correcttest = driver.findElement(By.name("submit"));

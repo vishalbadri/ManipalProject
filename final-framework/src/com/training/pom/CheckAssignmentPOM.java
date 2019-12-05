@@ -26,19 +26,17 @@ private WebDriver driver;
 	@FindBy(linkText = "Seleniumbasic")
 	private WebElement selcourse;
 	
-	@FindBy(id="istooldesc_6430")
+	@FindBy(linkText="Assignments")
 	private WebElement Assignments;
 	
-	@FindBy(id="jqg_workList_97")
-	private WebElement chkbox;
-	
+		
 	@FindBy(linkText = "Selenium Assignment1")
 	private WebElement clkAssign;
 	
 	@FindBy(xpath="//h3[contains(text(),'Selenium Assignment1')]")
 	private WebElement panelheader;
 	
-	@FindBy(xpath="//tr[@id='105']//a[2]//img[1]")
+	@FindBy(xpath="//div[@class='panel panel-default']//a[2]//img[1]")
 	private WebElement correctnrate;
 	
 	//private WebElement fr;
@@ -81,7 +79,6 @@ private WebDriver driver;
 	public  void checkAssignment() {
 		
 		Assignments.click();
-		chkbox.click();
 		clkAssign.click();
 		assertEquals(panelheader.getText(),"Selenium Assignment1");
 		System.out.println("Correct Assignment Page");
@@ -97,8 +94,6 @@ private WebDriver driver;
 		assertEquals(alert2.getText(),"Update successful");
 		System.out.println("Updates sucessful");
 		Assignlnk.click();
-		feedback.isDisplayed();
-		System.out.println(feedback.getText());
 		
 	}
 }

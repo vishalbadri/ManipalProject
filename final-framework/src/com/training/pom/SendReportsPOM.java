@@ -16,10 +16,10 @@ private WebDriver driver;
 	PageFactory.initElements(driver, this);
 }
 	//Finding  the WebElements here
-	@FindBy(id="istooldesc_6439")
+	@FindBy(xpath="//img[@id='toolimage_8445']")
 	private WebElement Reporting;
 	
-	@FindBy(xpath ="//tr[2]//td[16]//center[1]//a[1]//img[1]")
+	@FindBy(xpath ="//tr[@class='row_even']//td//center//a//img")
 	private WebElement StuDetails;
 	
 	@FindBy(xpath="//td[5]//a[1]//img[1]")
@@ -31,7 +31,7 @@ private WebDriver driver;
 	@FindBy(xpath = "//div[@class='alert alert-info']")
 	private WebElement alert;
 	
-	@FindBy(linkText = "Selenium")
+	@FindBy(linkText = "Seleniumbasic")
 	private WebElement coursename;
 		
 	private WebElement sendmail;
