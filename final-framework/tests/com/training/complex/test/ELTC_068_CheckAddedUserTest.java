@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.ELTC_065_AddOnlinequizPOM;
+import com.training.pom.ELTC_066_TeacherStuQuizPOM;
 import com.training.pom.ELTC_068_CheckAddedUserPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
@@ -34,6 +35,7 @@ public class ELTC_068_CheckAddedUserTest
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
 	private ELTC_065_AddOnlinequizPOM addonlinequiz;
+	private ELTC_066_TeacherStuQuizPOM teachstuquiz;
 	private ELTC_068_CheckAddedUserPOM checkadduser;
 	
 	@BeforeClass
@@ -50,6 +52,7 @@ public class ELTC_068_CheckAddedUserTest
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
 		addonlinequiz = new ELTC_065_AddOnlinequizPOM(driver);
+		teachstuquiz = new ELTC_066_TeacherStuQuizPOM(driver);
 		checkadduser = new ELTC_068_CheckAddedUserPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
@@ -77,6 +80,7 @@ public class ELTC_068_CheckAddedUserTest
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		screenShot.captureScreenShot("ELTC_068_AddnewUserTrainer");
+		teachstuquiz.StuTeachlogout();
 		driver.quit();
 	}
 

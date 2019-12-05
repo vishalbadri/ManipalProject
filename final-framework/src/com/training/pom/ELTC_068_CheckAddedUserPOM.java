@@ -79,6 +79,10 @@ private WebDriver driver;
 	//Verifying user details displayed
 	@FindBy(xpath="//a[contains(text(),'manszoor')]")
 	private WebElement verify;
+	
+	//Delete the user created
+	@FindBy(xpath="//a[10]//img[1]")
+	private WebElement delete;
 
 	public void CheckAddedUser(String adufname, String adulname, String adumail, String adufone, String adunme, String adupwd, String adupro) 
 	{
@@ -109,7 +113,9 @@ private WebDriver driver;
 		searchbtn.click();
 		assertEquals(verify.getText(),adufname);
 		System.out.println("User Sucessfully searched");
-
+		delete.click();
+		driver.switchTo().alert().accept();
+		System.out.println("User is Deleted");
 	}
 	
 
