@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ELTC_067_AddmultitrainerPOM 
+public class AddmultitrainerPOM 
 {
 private WebDriver driver;
 	
-	public ELTC_067_AddmultitrainerPOM(WebDriver driver) {
+	public AddmultitrainerPOM(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 }

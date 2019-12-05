@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
-import com.training.pom.ELTC_038_CreateGroupsPOM;
+import com.training.pom.CheckAssignmentPOM;
+import com.training.pom.CreateGroupsPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -25,8 +25,8 @@ public class ELTC_038_CreateGroupsTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
-	private ELTC_038_CreateGroupsPOM creategroups;
+	private CheckAssignmentPOM checkassignemnt;
+	private CreateGroupsPOM creategroups;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -41,8 +41,8 @@ public class ELTC_038_CreateGroupsTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
-		creategroups = new ELTC_038_CreateGroupsPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
+		creategroups = new CreateGroupsPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

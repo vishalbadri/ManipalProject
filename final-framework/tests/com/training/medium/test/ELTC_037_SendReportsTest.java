@@ -11,9 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
-import com.training.pom.ELTC_036_FeedbackTestPOM;
-import com.training.pom.ELTC_037_SendReportsPOM;
+import com.training.pom.CheckAssignmentPOM;
+import com.training.pom.FeedbackTestPOM;
+import com.training.pom.SendReportsPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -26,8 +26,8 @@ public class ELTC_037_SendReportsTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
-	private ELTC_037_SendReportsPOM sendreports;
+	private CheckAssignmentPOM checkassignemnt;
+	private SendReportsPOM sendreports;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -43,8 +43,8 @@ public class ELTC_037_SendReportsTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
-		sendreports = new ELTC_037_SendReportsPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
+		sendreports = new SendReportsPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

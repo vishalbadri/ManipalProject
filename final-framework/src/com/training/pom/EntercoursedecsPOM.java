@@ -10,11 +10,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ELTC_008_EntercoursedecsPOM {
+public class EntercoursedecsPOM {
 
 private WebDriver driver; 
 	
-	public ELTC_008_EntercoursedecsPOM(WebDriver driver) {
+	public EntercoursedecsPOM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 	}

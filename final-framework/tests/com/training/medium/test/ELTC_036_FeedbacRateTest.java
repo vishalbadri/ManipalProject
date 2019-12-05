@@ -14,8 +14,8 @@ import com.training.generics.ScreenShot;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
-import com.training.pom.ELTC_036_FeedbackTestPOM;
+import com.training.pom.CheckAssignmentPOM;
+import com.training.pom.FeedbackTestPOM;
 
 public class ELTC_036_FeedbacRateTest {
 	private static WebDriver driver;
@@ -25,8 +25,8 @@ public class ELTC_036_FeedbacRateTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
-	private ELTC_036_FeedbackTestPOM feedbacktest;
+	private CheckAssignmentPOM checkassignemnt;
+	private FeedbackTestPOM feedbacktest;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -41,8 +41,8 @@ public class ELTC_036_FeedbacRateTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
-		feedbacktest = new ELTC_036_FeedbackTestPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
+		feedbacktest = new FeedbackTestPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

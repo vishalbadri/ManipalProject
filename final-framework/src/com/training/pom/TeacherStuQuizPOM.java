@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ELTC_066_TeacherStuQuizPOM {
+public class TeacherStuQuizPOM {
 	private WebDriver driver;
 	
-	public ELTC_066_TeacherStuQuizPOM(WebDriver driver) {
+	public TeacherStuQuizPOM(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 }
@@ -32,7 +32,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement starttest;
 	
 	//Student Answer first question
-	@FindBy(xpath="//*[@id='choice-163-1']")
+	@FindBy(xpath="//label[contains(@class,'radio')]//p[contains(text(),'Selenium')]")
 	private WebElement firstans;
 	
 	//Student clicks next question
@@ -40,7 +40,7 @@ public class ELTC_066_TeacherStuQuizPOM {
 	private WebElement Nextbtn;
 	
 	//Studenr answers Next Que
-	@FindBy(xpath="//*[@id='choice-164-1']")
+	@FindBy(xpath="//p[contains(text(),'java')]")
 	private WebElement secans;
 	
 	//Student clicks EndTest

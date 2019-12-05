@@ -15,7 +15,7 @@ import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
+import com.training.pom.CheckAssignmentPOM;
 
 public class ELTC_035_CheckAssignmentTest 
 {
@@ -26,7 +26,7 @@ public class ELTC_035_CheckAssignmentTest
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
+	private CheckAssignmentPOM checkassignemnt;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -43,7 +43,7 @@ public class ELTC_035_CheckAssignmentTest
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

@@ -9,10 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class ELTC_038_CreateGroupsPOM {
+public class CreateGroupsPOM {
 private WebDriver driver; 
 	
-	public ELTC_038_CreateGroupsPOM(WebDriver driver) {
+	public CreateGroupsPOM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 }

@@ -11,9 +11,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_065_AddOnlinequizPOM;
-import com.training.pom.ELTC_066_TeacherStuQuizPOM;
-import com.training.pom.ELTC_068_CheckAddedUserPOM;
+import com.training.pom.AddOnlinequizPOM;
+import com.training.pom.TeacherStuQuizPOM;
+import com.training.pom.CheckAddedUserPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -40,9 +40,9 @@ public class ELTC_067_AddmultitrainerTest
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_065_AddOnlinequizPOM addonlinequiz;
-	private ELTC_066_TeacherStuQuizPOM teachstuquiz;
-	private ELTC_068_CheckAddedUserPOM checkadduser;
+	private AddOnlinequizPOM addonlinequiz;
+	private TeacherStuQuizPOM teachstuquiz;
+	private CheckAddedUserPOM checkadduser;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -58,9 +58,9 @@ public class ELTC_067_AddmultitrainerTest
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		addonlinequiz = new ELTC_065_AddOnlinequizPOM(driver);
-		teachstuquiz = new ELTC_066_TeacherStuQuizPOM(driver);
-		checkadduser = new ELTC_068_CheckAddedUserPOM(driver);
+		addonlinequiz = new AddOnlinequizPOM(driver);
+		teachstuquiz = new TeacherStuQuizPOM(driver);
+		checkadduser = new CheckAddedUserPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		Adminusr = properties.getProperty("Adminuser");
 		Adminpass = properties.getProperty("Adminpwd");

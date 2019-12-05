@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_009_UnscribeCoursePOM;
-import com.training.pom.ELTC_010_SearchCoursePOM;
+import com.training.pom.UnscribeCoursePOM;
+import com.training.pom.SearchCoursePOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -26,7 +26,7 @@ public class ELTC_010_SearchCourseTest
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_010_SearchCoursePOM searchcourse;
+	private SearchCoursePOM searchcourse;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -42,7 +42,7 @@ public class ELTC_010_SearchCourseTest
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		searchcourse = new ELTC_010_SearchCoursePOM(driver);
+		searchcourse = new SearchCoursePOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

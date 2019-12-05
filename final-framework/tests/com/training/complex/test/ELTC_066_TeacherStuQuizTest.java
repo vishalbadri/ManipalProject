@@ -11,10 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
-import com.training.pom.ELTC_036_FeedbackTestPOM;
-import com.training.pom.ELTC_065_AddOnlinequizPOM;
-import com.training.pom.ELTC_066_TeacherStuQuizPOM;
+import com.training.pom.CheckAssignmentPOM;
+import com.training.pom.FeedbackTestPOM;
+import com.training.pom.AddOnlinequizPOM;
+import com.training.pom.TeacherStuQuizPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -40,10 +40,10 @@ public class ELTC_066_TeacherStuQuizTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
-	private ELTC_036_FeedbackTestPOM feedbacktest;
-	private ELTC_065_AddOnlinequizPOM addonlinequiz;
-	private ELTC_066_TeacherStuQuizPOM teachstuquiz;
+	private CheckAssignmentPOM checkassignemnt;
+	private FeedbackTestPOM feedbacktest;
+	private AddOnlinequizPOM addonlinequiz;
+	private TeacherStuQuizPOM teachstuquiz;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -59,10 +59,10 @@ public class ELTC_066_TeacherStuQuizTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
-		feedbacktest = new ELTC_036_FeedbackTestPOM(driver);
-		addonlinequiz = new ELTC_065_AddOnlinequizPOM(driver);
-		teachstuquiz = new ELTC_066_TeacherStuQuizPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
+		feedbacktest = new FeedbackTestPOM(driver);
+		addonlinequiz = new AddOnlinequizPOM(driver);
+		teachstuquiz = new TeacherStuQuizPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");
@@ -98,6 +98,7 @@ public class ELTC_066_TeacherStuQuizTest {
 		teachstuquiz.StudentQuiz();
 		teachstuquiz.StuTeachlogout();
 		elearning_LoginPOM.Elearning_LoginPOM(username, password);
+		checkassignemnt.Selcourse();
 		feedbacktest.FeedbackTest();
 	}
 	@AfterMethod

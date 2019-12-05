@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.AdministrationPOM;
-import com.training.pom.ELTC_008_EntercoursedecsPOM;
+import com.training.pom.EntercoursedecsPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -29,7 +29,7 @@ public class ELTC_008_EntercoursedecsTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_008_EntercoursedecsPOM entercoursedesc;
+	private EntercoursedecsPOM entercoursedesc;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -46,7 +46,7 @@ public class ELTC_008_EntercoursedecsTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		entercoursedesc = new ELTC_008_EntercoursedecsPOM(driver);
+		entercoursedesc = new EntercoursedecsPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");

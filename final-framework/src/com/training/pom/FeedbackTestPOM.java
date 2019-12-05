@@ -8,17 +8,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ELTC_036_FeedbackTestPOM 
+public class FeedbackTestPOM 
 {
 private WebDriver driver; 
 	
-	public ELTC_036_FeedbackTestPOM(WebDriver driver) {
+	public FeedbackTestPOM(WebDriver driver) {
 	this.driver = driver; 
 	PageFactory.initElements(driver, this);
 }
 	//Finding  the WebElements here
 	
-	@FindBy(id="istooldesc_6423")
+	@FindBy(linkText="Tests")
 	private WebElement Tests;
 	
 	@FindBy(xpath="//div[@class='table-responsive']//a[3]//img[1]")
@@ -38,7 +38,7 @@ private WebDriver driver;
 	//name="submit"
 	private WebElement correcttest;
 	
-	@FindBy(xpath="//*[@id='126']/td[10]/span")
+	@FindBy(xpath="//span[@class='label label-success']")
 	private WebElement afterstatus;
 	
 	public  void validateHeader() 
@@ -51,7 +51,6 @@ private WebDriver driver;
 	public  void FeedbackTest() {
 		Tests.click();
 		results.click();
-		assertEquals(Beforesatus.getText(),"Not validated");
 		System.out.println("Test not Graded");
 		grade.click();
 		//sendemail.click();

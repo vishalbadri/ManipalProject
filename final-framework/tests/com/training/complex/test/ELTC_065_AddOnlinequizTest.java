@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.ELTC_035_CheckAssignmentPOM;
-import com.training.pom.ELTC_065_AddOnlinequizPOM;
+import com.training.pom.CheckAssignmentPOM;
+import com.training.pom.AddOnlinequizPOM;
 import com.training.pom.Elearning_LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -31,8 +31,8 @@ public class ELTC_065_AddOnlinequizTest {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private Elearning_LoginPOM elearning_LoginPOM;
-	private ELTC_035_CheckAssignmentPOM checkassignemnt;
-	private ELTC_065_AddOnlinequizPOM addonlinequiz;
+	private CheckAssignmentPOM checkassignemnt;
+	private AddOnlinequizPOM addonlinequiz;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException 
@@ -47,8 +47,8 @@ public class ELTC_065_AddOnlinequizTest {
 //		
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		elearning_LoginPOM = new Elearning_LoginPOM(driver);
-		checkassignemnt = new ELTC_035_CheckAssignmentPOM(driver);
-		addonlinequiz = new ELTC_065_AddOnlinequizPOM(driver);
+		checkassignemnt = new CheckAssignmentPOM(driver);
+		addonlinequiz = new AddOnlinequizPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
 		username = properties.getProperty("UserName");
 		password = properties.getProperty("Password");
