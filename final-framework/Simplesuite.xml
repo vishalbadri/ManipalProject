@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Elearning Simpletest Suite">
+   <test name = "Simple test">
+      <classes>
+         <class name = "com.training.simple.test.ELTC_007_CreatecourseTest" />
+         <class name = "com.training.simple.test.ELTC_008_EntercoursedecsTest" />
+         <class name = "com.training.simple.test.ELTC_009_UnscribeCourseTest" />
+         <class name = "com.training.simple.test.ELTC_010_SearchCourseTest" />
+      </classes>
+   </test>
+</suite>

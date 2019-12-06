@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Elearning Complextest Suite">
+   <test name = "Complex test">
+      <classes>
+         <class name = "com.training.complex.test.ELTC_065_AddOnlinequizTest" />
+         <class name = "com.training.complex.test.ELTC_066_TeacherStuQuizTest" />
+         <class name = "com.training.complex.test.ELTC_067_AddmultitrainerTest" />
+         <class name = "com.training.complex.test.ELTC_068_CheckAddedUserTest" />
+      </classes>
+   </test>
+</suite>	

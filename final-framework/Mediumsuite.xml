@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "Elearning Mediumtest Suite">
+   <test name = "Medium test">
+      <classes>
+         <class name = "com.training.medium.test.ELTC_035_CheckAssignmentTest" />
+         <class name = "com.training.medium.test.ELTC_036_FeedbacRateTest" />
+         <class name = "com.training.medium.test.ELTC_037_SendReportsTest" />
+         <class name = "com.training.medium.test.ELTC_038_CreateGroupsTest" />
+      </classes>
+   </test>
+</suite>
