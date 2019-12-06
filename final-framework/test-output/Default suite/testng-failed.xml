@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.complex.test.ELTC_066_TeacherStuQuizTest">
+      <class name="com.training.medium.test.ELTC_038_CreateGroupsTest">
         <methods>
-          <include name="TeacherStuQuiz"/>
+          <include name="CreateGroupsTestTest"/>
           <include name="setUp"/>
           <include name="setUpBeforeClass"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.complex.test.ELTC_066_TeacherStuQuizTest -->
+      </class> <!-- com.training.medium.test.ELTC_038_CreateGroupsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

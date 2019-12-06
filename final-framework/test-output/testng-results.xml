@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="114191" started-at="2019-12-05T19:42:36 IST" finished-at="2019-12-05T19:44:31 IST">
+  <suite name="Default suite" duration-ms="46667" started-at="2019-12-05T23:08:56 IST" finished-at="2019-12-05T23:09:42 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="114191" started-at="2019-12-05T19:42:36 IST" finished-at="2019-12-05T19:44:31 IST">
-      <class name="com.training.complex.test.ELTC_066_TeacherStuQuizTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.complex.test.ELTC_066_TeacherStuQuizTest@694e1548]" name="setUpBeforeClass" is-config="true" duration-ms="20" started-at="2019-12-05T19:42:36 IST" finished-at="2019-12-05T19:42:36 IST">
+    <test name="Default test" duration-ms="46667" started-at="2019-12-05T23:08:56 IST" finished-at="2019-12-05T23:09:42 IST">
+      <class name="com.training.medium.test.ELTC_038_CreateGroupsTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.medium.test.ELTC_038_CreateGroupsTest@694e1548]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2019-12-05T23:08:56 IST" finished-at="2019-12-05T23:08:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.complex.test.ELTC_066_TeacherStuQuizTest@694e1548]" name="setUp" is-config="true" duration-ms="17984" started-at="2019-12-05T19:42:36 IST" finished-at="2019-12-05T19:42:54 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.medium.test.ELTC_038_CreateGroupsTest@694e1548]" name="setUp" is-config="true" duration-ms="16915" started-at="2019-12-05T23:08:56 IST" finished-at="2019-12-05T23:09:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TeacherStuQuiz()[pri:0, instance:com.training.complex.test.ELTC_066_TeacherStuQuizTest@694e1548]" name="TeacherStuQuiz" duration-ms="93753" started-at="2019-12-05T19:42:54 IST" finished-at="2019-12-05T19:44:28 IST">
+        <test-method status="PASS" signature="CreateGroupsTestTest()[pri:0, instance:com.training.medium.test.ELTC_038_CreateGroupsTest@694e1548]" name="CreateGroupsTestTest" duration-ms="27344" started-at="2019-12-05T23:09:13 IST" finished-at="2019-12-05T23:09:40 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TeacherStuQuiz -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.complex.test.ELTC_066_TeacherStuQuizTest@694e1548]" name="tearDown" is-config="true" duration-ms="2390" started-at="2019-12-05T19:44:28 IST" finished-at="2019-12-05T19:44:31 IST">
+        </test-method> <!-- CreateGroupsTestTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.medium.test.ELTC_038_CreateGroupsTest@694e1548]" name="tearDown" is-config="true" duration-ms="2350" started-at="2019-12-05T23:09:40 IST" finished-at="2019-12-05T23:09:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.complex.test.ELTC_066_TeacherStuQuizTest -->
+      </class> <!-- com.training.medium.test.ELTC_038_CreateGroupsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

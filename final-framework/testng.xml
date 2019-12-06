@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Elearning test Suite">
+<suite name = "Elearning Simpletest Suite">
    <test name = "Simple test">
       <classes>
          <class name = "com.training.simple.test.ELTC_007_CreatecourseTest" />
@@ -10,6 +10,8 @@
          <class name = "com.training.simple.test.ELTC_010_SearchCourseTest" />
       </classes>
    </test>
+</suite>	
+<suite name = "Elearning Mediumtest Suite">
    <test name = "Medium test">
       <classes>
          <class name = "com.training.medium.test.ELTC_035_CheckAssignmentTest" />
@@ -18,6 +20,8 @@
          <class name = "com.training.medium.test.ELTC_038_CreateGroupsTest" />
       </classes>
    </test>
+</suite>
+<suite name = "Elearning Complextest Suite">
    <test name = "Complex test">
       <classes>
          <class name = "com.training.complex.test.ELTC_065_AddOnlinequizTest" />

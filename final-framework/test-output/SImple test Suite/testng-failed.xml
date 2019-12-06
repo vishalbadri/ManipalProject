@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SImple test Suite]">
+  <test thread-count="5" name="SImple test(failed)">
+    <classes>
+      <class name="com.training.simple.test.ELTC_007_CreatecourseTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUpBeforeClass"/>
+          <include name="setUp"/>
+          <include name="createcourseTest"/>
+        </methods>
+      </class> <!-- com.training.simple.test.ELTC_007_CreatecourseTest -->
+    </classes>
+  </test> <!-- SImple test(failed) -->
+</suite> <!-- Failed suite [SImple test Suite] -->
